@@ -83,10 +83,10 @@ config.vm.provision "shell", inline: <<-SHELL
   sudo wget http://localhost:15672/cli/rabbitmqadmin -P /usr/local/bin
   sudo chmod +x /usr/local/bin/rabbitmqadmin
 
-  #rabbitmqadmin declare vhost name=DocManagement
-  #rabbitmqadmin declare permission vhost=DocManagement user=guest configure=.* write=.* read=.*
+  rabbitmqadmin declare vhost name=DocManagement
+  rabbitmqadmin declare permission vhost=DocManagement user=guest configure=.* write=.* read=.*
 
-  #rabbitmqadmin declare queue name=DocManRoute --vhost=DocManagement
+  rabbitmqadmin declare queue name=DocManRoute --vhost=DocManagement
 
 
 SHELL
